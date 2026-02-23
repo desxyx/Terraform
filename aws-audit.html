@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="60" />
+  <title>AWS Quick Audit (us-east-2)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 6px; }
+    .meta { color: #555; margin-bottom: 18px; }
+    table { border-collapse: collapse; width: 100%; margin: 10px 0 24px; }
+    th, td { border: 1px solid #ddd; padding: 8px; font-size: 14px; vertical-align: top; }
+    th { background: #f4f4f4; text-align: left; }
+    .warn { padding: 10px; background: #fff7e6; border: 1px solid #ffe1a3; margin: 14px 0; }
+    .ok { padding: 10px; background: #f0fff4; border: 1px solid #c6f6d5; margin: 14px 0; }
+    code { background: #f6f8fa; padding: 2px 4px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>AWS Quick Audit</h1>
+  <div class="meta">
+    Profile: <b>(default)</b> &nbsp;|&nbsp; Region: <b>us-east-2</b> &nbsp;|&nbsp; Generated: <b>2026-02-08 23:45:57</b>
+  </div>
+
+  <div class="warn">
+    <b>Cost traps to watch:</b>
+    NAT Gateways, Load Balancers, unassociated Elastic IPs, unattached EBS volumes, EBS snapshots, CloudWatch logs with no retention, idle RDS.
+  </div>
+
+  <h2>Running EC2 Instances</h2>
+  <p><em>None</em></p>
+
+  <h2>Elastic IPs</h2>
+  <p><em>None</em></p>
+
+  <h2>NAT Gateways</h2>
+  <p><em>None</em></p>
+
+  <h2>Load Balancers (ELBv2)</h2>
+  <p><em>None</em></p>
+
+  <h2>Security Groups</h2>
+  <table><thead><tr><th>GroupName</th><th>GroupId</th><th>VpcId</th><th>InRules</th><th>OutRules</th><th>WideOpenIn</th><th>Description</th></tr></thead><tbody><tr><td>tf_ssh</td><td>sg-02d0c3257b2b9a0fa</td><td>vpc-01fab89ab889e847b</td><td>2</td><td>1</td><td>True</td><td>tf_ssh</td></tr><tr><td>default</td><td>sg-0243840bc89e921fe</td><td>vpc-01fab89ab889e847b</td><td>1</td><td>1</td><td>False</td><td>default VPC security group</td></tr></tbody></table>
+
+  <h2>Lambda Functions</h2>
+  <p><em>None</em></p>
+
+  <h2>RDS Instances</h2>
+  <p><em>None</em></p>
+
+  <h2>EBS Volumes</h2>
+  <p><em>None</em></p>
+
+  <h2>EBS Snapshots</h2>
+  <p><em>None</em></p>
+
+  <h2>CloudWatch Log Groups</h2>
+  <p><em>None</em></p>
+
+  <h2>S3 Buckets</h2>
+  <p><em>None</em></p>
+
+  <p style="color:#666">
+    Refresh workflow: run <code>.\aws-audit.ps1 -Region us-east-2</code>
+    
+    again, then refresh this page.
+  </p>
+</body>
+</html>
